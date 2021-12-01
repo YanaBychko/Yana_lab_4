@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yana_responsive-flex</title>
+    <style media="screen">
+  nav{/*селектор тегу для боксу Navbar*/
+  background-color:royalblue;/*колір боксу*/
+  height:75px;/*висота боксу*/
+}
+header{/*селектор тегу для боксу Header*/
+  background-image: url(priroda.jpg);
+  background-position: center;
+  background-size: cover;
+  height:400px;/*висота боксу*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section{/*селектор тегу для боксу Main section*/
+  background-color:grey;/*колір боксу*/
+  height:500px;/*висота боксу*/
+  margin-top:75px;/*простір зверху над боксом*/
+  margin-bottom:75px;/*простір під боксом*/
+  margin-left:100px;/*простір зліва від боксу*/
+  margin-right:100px;/*простір справа від боксу*/
+}
+.div{/*селектор тегу для боксу PreFooter section*/
+  background-color:silver;/*колір боксу*/
+  height:40px;/*висота боксу*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer{/*селектор тегу для боксу Footer*/
+  background-color:black;/*колір боксу*/
+  height:100px;/*висота боксу*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p{/*селектор тегу для боксу Yellow paragraph*/
+  background-color: khaki;/*колір боксу*/
+  height:200px;/*висота боксу*/
+  margin-bottom:75px;/*простір під боксом*/
+}
+.flex{
+  display:flex;/*це властивість, що визначає здатність елемента розтягуватися або стискатися для заповнення доступного вільного простору.
+  Тому мені потрібно було використати Flex box для розміщення цих двух помаранчевих боксів*/
+}
+.tomato_box_1{/*селектор класу для першого помаранчевого flex боксу*/
+  height:225px;/*висота першого боксу(200 як у прикладі виявилось замало)*/
+  background-color:tomato;/*колір боксу*/
+  width:48%;/*ширина боксу*/
+  margin-right:30px;/*відступ справа*/
+}
+.tomato_box_2{/*селектор класу для ддругого помаранчевого flex боксу*/
+  height:225px;/*висота першого боксу(200 як у прикладі виявилось замало)*/
+  background-color:tomato;/*колір боксу*/
+  width:48%;/*ширина боксу*/
+  margin-left:30px;/*відступ зліва*/
+}
+.span_1{
+  color: White;
+  font-size: 30px;
+  font-family: constantia;
+  text-decoration:underline;
+  margin-left: 150px;
+}
+.span_2{
+  color: White;
+  font-size: 25px;
+  font-family: constantia;
+  float: right;
+}
+.city{
+  font-family: constantia;
+  color: White;
+  font-size: 60px;
+}
+.p{
+  font-family: constantia;
+  font-size: 20px;
+}
+.foto_1{
+  height:180px;
+  width:180px;
+}
+.text{
+  font-family: constantia;
+  font-size: 20px;
+}
+.YB{
+  font-family: constantia;
+  font-size: 30px;
+  color: White;
+}
+@media (max-width: 1000px) {
+  .p{
+    font-family: constantia;
+    font-size: 10px;
+  }
+  .foto_1{
+    height:100px;
+    width:100px;
+  }
+}
+@media (max-width: 800px)
+{
+  .span_1{
+    color: White;
+    font-size: 20px;
+    font-family: constantia;
+    text-decoration:underline;
+    margin-left: 50px;
+  }
+  .span_2{
+    color: White;
+    font-size: 20px;
+    font-family: constantia;
+    float: right;
+  }
+  .city{
+    font-family: constantia;
+    color: White;
+    font-size: 40px;
+  }
+  .YB{
+    font-family: constantia;
+    font-size: 20px;
+    color: White;
+  }
+  .text{
+    font-family: constantia;
+    font-size: 15px;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <span class="span_1">City Portal</span>
+      <span>
+        <a class="span_2" href="index.html">Cторінка Яни</a>
+      </span>
+    </nav><!--бокс Navbar(для навігації по сайту)-->
+<header>
+  <div class="city">Еverything about cities</div>
+</header><!--бокс Header(шапка сайту (заголовок))-->
+<section><!--бокс Main section(основна інформація)-->
+  <p class="p"> City is a large human settlement.It can be defined as a permanent and densely settled place with administratively defined
+    boundaries whose members work primarily on non-agricultural tasks.Cities generally have extensive systems for housing,
+    transportation, sanitation, utilities, land use, production of goods, and communication. Their density facilitates
+    interaction between people, government organisations and businesses, sometimes benefiting different parties in the process,
+    such as improving efficiency of goods and service distribution. </p><!--бокс Yellow paragraph всередині основоного-->
+  <div class="flex"><!--тег div з селектором класу для використання Flex box-->
+    <div class="tomato_box_1">
+<center>
+    <img class="foto_1" src="Nju-Jork.jpg" alt="">
+    <div class="text"> New York</div>
+  </center>
+    </div><!--використала селектор класу для першого боксу-->
+    <div class="tomato_box_2">
+      <center>
+        <img class="foto_1" src="LA.jpg" alt="">
+        <div class="text"> Los Angeles</div>
+        </center>
+    </div><!--використала селектор класу для другого боксу-->
+  </div>
+</section>
+<div class="div">
+  <div class="text">Thanks for watching</div>
+</div><!--бокс PreFooter section-->
+<footer>
+  <div class="YB">Work of Yana Bychko, BI-242</div>
+</footer><!--бокс Footer(наприклад для імені автора, дати документа-->
+  </body>
+</html>
